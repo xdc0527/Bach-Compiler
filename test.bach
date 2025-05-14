@@ -1,0 +1,57 @@
+integer x.
+void f[] [
+    disp <- "Hello world!".
+    disp <- "\n".
+    return.
+]
+integer g[integer a, integer b] [
+    if (a >= b) {
+        return a - b.
+    }
+    return b - a.
+]
+integer h1[integer n] [
+    integer i.
+    integer res.
+    res = 0.
+    i = 1.
+    while (i <= n) {
+        res = res + i.
+        i ++.
+    }
+    return res.
+]
+integer h2[integer n] [
+    integer i.
+    integer res.
+    res = 0.
+    i = n.
+    while (i > 0) {
+        res = res + i.
+        i --.
+    }
+    return res.
+]
+void main[] [
+    integer c.
+    boolean y.
+    f().
+    c = g(1, 2).
+    disp <- c.
+    disp <- "\n".
+    c = g(4, 2).
+    disp <- c.
+    disp <- "\n".
+    disp <- h1(5).
+    disp <- "\n".
+    disp <- h2(4).
+    disp <- "\n".
+    x = 0.
+    disp <- x.
+    disp <- "\n".
+    y = TRUE & FALSE.
+    disp <- y.
+    disp <- "\n".
+    y = TRUE | FALSE.
+    disp <- y.
+]
